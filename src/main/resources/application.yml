@@ -9,7 +9,7 @@ spring:
     init:
       mode: always
   datasource:
-    url: jdbc:postgresql://localhost:5432/mandarin
-    password: postgres
-    username: postgres
+    url: ${DB_URL}
+    password: ${DB_PASS}
+    username: ${DB_USER}
     driverClassName: org.postgresql.Driver
