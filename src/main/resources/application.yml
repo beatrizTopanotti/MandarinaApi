@@ -1,0 +1,15 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mandarin
+    password: postgres
+    username: postgres
+    driverClassName: org.postgresql.Driver
