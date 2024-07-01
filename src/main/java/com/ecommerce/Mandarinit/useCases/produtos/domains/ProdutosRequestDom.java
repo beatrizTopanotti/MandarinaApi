@@ -15,7 +15,6 @@ public class ProdutosRequestDom {
     private String imagemGrande;
     private LocalDateTime createdAt;
     private LocalDateTime deletedAt;
-    private List<ProdutosPrecos> precos;
     private CategoriasEnum categoria;
 
     public String getCodigoProduto() {
@@ -74,13 +73,6 @@ public class ProdutosRequestDom {
         this.deletedAt = deletedAt;
     }
 
-    public List<ProdutosPrecos> getPrecos() {
-        return precos;
-    }
-
-    public void setPrecos(List<ProdutosPrecos> precos) {
-        this.precos = precos;
-    }
 
     public CategoriasEnum getCategoria() {
         return categoria;

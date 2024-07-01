@@ -1,6 +1,7 @@
 package com.ecommerce.Mandarinit.useCases.produtos.implement.mappers;
 
 import com.ecommerce.Mandarinit.entitys.Produtos;
+
 import com.ecommerce.Mandarinit.useCases.produtos.domains.ProdutosResponseDom;
 
 public class ProdutosMappers {
@@ -13,7 +14,7 @@ public class ProdutosMappers {
         out.setImagemPequena(in.getImagemPequena());
         out.setImagemGrande(in.getImagemGrande());
         out.setCreatedAt(in.getCreatedAt());
-        out.setPrecos(in.getPrecos());
+        out.setPreco(!in.getPrecos().isEmpty() ? in.getPrecos().get(0).getPreco() : 0.0);
 
         return out;
     }
