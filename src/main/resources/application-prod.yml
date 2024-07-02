@@ -1,0 +1,7 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:postgresql://dpg-cq1kgjbv2p9s73d3enag-a:5432/mandarin
+    password: 8TIbOUURH6XO0IeOEpmtVriPWh8yCmAw
+    username: mandarin_user

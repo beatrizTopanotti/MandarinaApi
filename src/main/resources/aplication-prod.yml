@@ -1,7 +1,0 @@
-server:
-  port: 8080
-spring:
-  datasource:
-    url: jdbc:postgresql://roundhouse.proxy.rlwy.net/railway
-    password: LItLWvfaTmQledRkMsEkpUIiURgdQjHj
-    username: postgres
