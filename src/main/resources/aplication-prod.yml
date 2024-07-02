@@ -2,6 +2,6 @@ server:
   port: 8080
 spring:
   datasource:
-    url: ${DB_URL}
-    password: ${DB_PASS}
-    username: ${DB_USER}
+    url: jdbc:postgresql://roundhouse.proxy.rlwy.net/railway
+    password: LItLWvfaTmQledRkMsEkpUIiURgdQjHj
+    username: postgres
