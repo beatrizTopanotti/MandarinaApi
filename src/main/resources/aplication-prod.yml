@@ -1,7 +1,0 @@
-server:
-  port: 8080
-spring:
-  datasource:
-    url: ${DB_URL}
-    password: ${DB_PASS}
-    username: ${DB_USER}
