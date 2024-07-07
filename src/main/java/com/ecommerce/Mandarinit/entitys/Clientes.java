@@ -7,8 +7,6 @@ import org.hibernate.annotations.Where;
 import java.util.List;
 
 @Entity
-@SQLDelete(sql = "UPDATE clientes SET deleted_at = now() WHERE id=?")
-@Where(clause = "deleted_at is null")
 public class Clientes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

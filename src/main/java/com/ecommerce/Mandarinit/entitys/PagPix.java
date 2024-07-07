@@ -31,6 +31,12 @@ public class PagPix {
         this.id = id;
     }
 
+    @Column(columnDefinition = "timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL")
+    private LocalDateTime createdAt;
+
+    @Column()
+    private LocalDateTime deletedAt;
+
     public String getNomePagador() {
         return nomePagador;
     }
@@ -45,6 +51,22 @@ public class PagPix {
 
     public void setHoraPagamento(LocalDateTime horaPagamento) {
         this.horaPagamento = horaPagamento;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getDeletedAt() {
+        return deletedAt;
+    }
+
+    public void setDeletedAt(LocalDateTime deletedAt) {
+        this.deletedAt = deletedAt;
     }
 
     @Override

@@ -27,6 +27,12 @@ public class PagCartao {
     @Column(nullable = false, columnDefinition = "timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL")
     private LocalDateTime validade;
 
+    @Column(columnDefinition = "timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL")
+    private LocalDateTime createdAt;
+
+    @Column()
+    private LocalDateTime deletedAt;
+
     public PagCartao() {}
 
     public Long getId() {
@@ -67,6 +73,22 @@ public class PagCartao {
 
     public void setValidade(LocalDateTime validade) {
         this.validade = validade;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getDeletedAt() {
+        return deletedAt;
+    }
+
+    public void setDeletedAt(LocalDateTime deletedAt) {
+        this.deletedAt = deletedAt;
     }
 
     @Override

@@ -8,8 +8,6 @@ import org.hibernate.annotations.Where;
 import java.util.List;
 
 @Entity
-@SQLDelete(sql = "UPDATE cidades SET deleted_at = now() WHERE id=?")
-@Where(clause = "deleted_at is null")
 public class Cidades  {
 
     @Id

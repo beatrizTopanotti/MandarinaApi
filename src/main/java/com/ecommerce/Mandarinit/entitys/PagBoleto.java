@@ -24,6 +24,12 @@ public class PagBoleto {
     @Column(nullable = false)
     private Double valor;
 
+    @Column(columnDefinition = "timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL")
+    private LocalDateTime createdAt;
+
+    @Column()
+    private LocalDateTime deletedAt;
+
     public PagBoleto() {}
 
     public Long getId() {
@@ -56,6 +62,22 @@ public class PagBoleto {
 
     public void setValor(Double valor) {
         this.valor = valor;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getDeletedAt() {
+        return deletedAt;
+    }
+
+    public void setDeletedAt(LocalDateTime deletedAt) {
+        this.deletedAt = deletedAt;
     }
 
     @Override

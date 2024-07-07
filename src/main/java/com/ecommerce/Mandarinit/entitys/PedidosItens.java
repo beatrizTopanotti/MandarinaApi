@@ -5,8 +5,6 @@ import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
 @Entity
-@SQLDelete(sql = "UPDATE pedidos_itens SET deleted_at = now() WHERE id=?")
-@Where(clause = "deleted_at is null")
 public class PedidosItens {
 
     @Id
