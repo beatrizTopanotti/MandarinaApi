@@ -15,7 +15,7 @@ public class ProdutosPrecos {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column
     private Double preco;
 
     @ManyToOne

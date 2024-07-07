@@ -15,7 +15,7 @@ public class ProdutosResponseDom {
     private String imagemGrande;
     private LocalDateTime createdAt;
     private LocalDateTime deletedAt;
-    private List<ProdutosPrecos> precos;
+    private Double preco;
     private CategoriasEnum categoria;
 
     public Long getId() {
@@ -82,12 +82,12 @@ public class ProdutosResponseDom {
         this.deletedAt = deletedAt;
     }
 
-    public List<ProdutosPrecos> getPrecos() {
-        return precos;
+    public Double getPreco() {
+        return preco;
     }
 
-    public void setPrecos(List<ProdutosPrecos> precos) {
-        this.precos = precos;
+    public void setPreco(Double preco) {
+        this.preco = preco;
     }
 
     public CategoriasEnum getCategoria() {

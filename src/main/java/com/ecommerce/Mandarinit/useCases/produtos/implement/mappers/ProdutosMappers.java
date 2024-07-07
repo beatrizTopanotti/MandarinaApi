@@ -13,7 +13,12 @@ public class ProdutosMappers {
         out.setImagemPequena(in.getImagemPequena());
         out.setImagemGrande(in.getImagemGrande());
         out.setCreatedAt(in.getCreatedAt());
-        out.setPrecos(in.getPrecos());
+
+        if(!in.getPrecos().isEmpty()) {
+            out.setPreco(in.getPrecos().get(0).getPreco());
+        } else {
+            out.setPreco(0.0);
+        }
 
         return out;
     }

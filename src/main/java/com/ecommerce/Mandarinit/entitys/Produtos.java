@@ -38,7 +38,7 @@ public class Produtos {
     @Column()
     private LocalDateTime deletedAt;
 
-    @OneToMany(mappedBy = "preco", cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "produto")
     private List<ProdutosPrecos> precos;
 
     @Enumerated(EnumType.STRING)
