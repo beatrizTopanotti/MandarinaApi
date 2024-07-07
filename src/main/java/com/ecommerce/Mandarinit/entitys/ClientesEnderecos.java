@@ -4,12 +4,11 @@ import jakarta.persistence.*;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-//@SQLDelete(sql = "UPDATE clientes_enderecos SET deleted_at = now() WHERE id=?")
-//@Where(clause = "deleted_at is null")
+@SQLDelete(sql = "UPDATE clientes_enderecos SET deleted_at = now() WHERE id=?")
+@Where(clause = "deleted_at is null")
 public class ClientesEnderecos {
 
     @Id
@@ -32,12 +31,6 @@ public class ClientesEnderecos {
 
     @OneToMany(mappedBy = "endereco")
     private List<Pedidos> pedidos;
-
-    @Column(columnDefinition = "timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL")
-    private LocalDateTime createdAt;
-
-    @Column()
-    private LocalDateTime deletedAt;
 
     public ClientesEnderecos() {}
 
@@ -87,22 +80,6 @@ public class ClientesEnderecos {
 
     public void setPedidos(List<Pedidos> pedidos) {
         this.pedidos = pedidos;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public LocalDateTime getDeletedAt() {
-        return deletedAt;
-    }
-
-    public void setDeletedAt(LocalDateTime deletedAt) {
-        this.deletedAt = deletedAt;
     }
 
     @Override

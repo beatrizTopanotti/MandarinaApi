@@ -41,3 +41,15 @@ VALUES(4, 50.0, (select id from produtos p where p.codigo_produto = 'PRO202404')
 INSERT INTO public.produtos_precos
 (id, preco, produtos_id)
 VALUES(5, 60.0, (select id from produtos p where p.codigo_produto = 'PRO202405'))  ON conflict DO nothing ;
+
+INSERT INTO public.cidades
+(id, nome, estado)
+VALUES(1, 'Criciúma', 'SC') ON conflict DO nothing;
+
+INSERT INTO public.cidades
+(id, nome, estado)
+VALUES(2, 'Içara', 'SC') ON conflict DO nothing ;
+
+INSERT INTO public.cidades
+(id, nome, estado)
+VALUES(3, 'Cocal do Sul', 'SC') ON conflict DO nothing;
