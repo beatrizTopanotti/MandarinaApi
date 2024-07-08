@@ -12,7 +12,7 @@ public class ClientesMappers {
         out.setNome(in.getNome());
         out.setSobrenome(in.getSobrenome());
         out.setEnderecos(in.getEnderecos());
-        out.setPedidos(in.getPedidos()); // talvez eu tire
+        out.setPedidos(in.getPedidos());
 
         return out;
     }
